@@ -141,3 +141,12 @@
   iterations: 1
   test_srcs: custom_assembly_riscv/CSR.S
   config: custom-rv32i-tests
+
+- test: RAW_hazard
+  desc: >
+    Custom RV32IM directed RAW hazard stress test with around 200 body
+    instructions covering chained ALU, mul/div, load-use, store-data, and
+    store-address dependencies.
+  iterations: 1
+  test_srcs: custom_assembly_riscv/RAW_hazard.s
+  config: custom-rv32m-tests
