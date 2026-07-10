@@ -150,3 +150,12 @@
   iterations: 1
   test_srcs: custom_assembly_riscv/RAW_hazard.s
   config: custom-rv32m-tests
+
+- test: control_hazard
+  desc: >
+    Custom RV32I/Zifencei directed control hazard stress test with around 200
+    body instructions covering taken and not-taken branches, jal, jalr,
+    load-to-branch, ALU-to-branch, and fence.i cases.
+  iterations: 1
+  test_srcs: custom_assembly_riscv/control_hazard.s
+  config: custom-rv32i-tests
