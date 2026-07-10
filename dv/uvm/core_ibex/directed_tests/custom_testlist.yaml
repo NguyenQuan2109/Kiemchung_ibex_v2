@@ -159,3 +159,12 @@
   iterations: 1
   test_srcs: custom_assembly_riscv/control_hazard.s
   config: custom-rv32i-tests
+
+- test: stress_branch
+  desc: >
+    Custom RV32I/Zifencei compact control-hazard corner-case test with branch,
+    jump, ret, and fence.i instructions placed back-to-back, including taken
+    and not-taken branches with forward and backward offsets.
+  iterations: 1
+  test_srcs: custom_assembly_riscv/stress_branch.s
+  config: custom-rv32i-tests
